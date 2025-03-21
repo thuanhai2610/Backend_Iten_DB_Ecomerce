@@ -15,6 +15,7 @@ import morgan from 'morgan';
 import * as path from 'path';
 import { ExpressPeerServer } from 'peer';
 import AppModule from './route/app/app.module';
+import UserService from '@authorization/a1-user/user.service';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -75,8 +76,8 @@ async function bootstrap() {
     SwaggerModule.setup('api', app, document);
   }
 
-  const rolesGuard = app.get<RolesGuard>(RolesGuard);
-  app.useGlobalGuards(rolesGuard);
+  // const rolesGuard = app.get<RolesGuard>(RolesGuard);
+  // app.useGlobalGuards(rolesGuard);
 
   // run app
   await app.listen(port, async () => {

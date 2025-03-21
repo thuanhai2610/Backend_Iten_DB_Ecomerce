@@ -37,8 +37,8 @@ const arrayAppModule = [
   CustomLoggerModule,
   MongooseModule.forRoot(ShareFunction.env().MONGODB_URL as string, {
     // useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
     // useFindAndModify: false,
     connectionFactory: (connection) => {
       connection.plugin(mongoosePaginate);
