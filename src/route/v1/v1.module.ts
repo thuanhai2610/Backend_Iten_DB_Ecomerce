@@ -7,7 +7,7 @@ import GroupApiModule from '@authorization/a7-group-api/group-api.module';
 import BackupDataModule from '@common/c0-backup/backup-data.module';
 import DashboardModule from '@common/c10-dashboard/dashboard.module';
 import TransactionModule from '@common/c11-transaction/transaction.module';
-import NotificationModule from '@common/c12-notification/notification.module';
+import NotifycationModule from '@common/c12-notification/notification.module';
 import SettingModule from '@common/c13-setting/setting.module';
 import { SeedModule } from '@common/c14-seed/seed.module';
 import CountryModule from '@common/c15-country/country.module';
@@ -65,7 +65,7 @@ const routes: Routes = [
       { path: '/histories', module: HistoryModule },
       { path: '/dashboards', module: DashboardModule },
       { path: '/transactions', module: TransactionModule },
-      { path: '/notifications', module: NotificationModule },
+      { path: '/notifications', module: NotifycationModule },
       { path: '/settings', module: SettingModule },
       { path: '/countries', module: CountryModule },
 
@@ -118,7 +118,7 @@ const imports = [
   VillageModule,
   HistoryModule,
   DashboardModule,
-  NotificationModule,
+  NotifycationModule,
   SettingModule,
   CountryModule,
   TransactionModule,
